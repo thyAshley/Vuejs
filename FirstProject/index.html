@@ -7,14 +7,12 @@
     <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
-    <div id="app">
-      <header>
-        <h2>{{name}}</h2>
-        <h2>{{age}}</h2>
-        <h2>{{ageInFive()}}</h2>
-        <h2>{{randomNumber()}}</h2>
-        <input type="text" v-bind:value="name" />
-      </header>
+    <div id="events">
+      <h2>Events</h2>
+      <input type="text" v-on:input="setName" />
+      <button v-on:click="addCounter">Add {{value}}</button>
+      <button v-on:click="minusCounter">Remove {{value}}</button>
+      <p>Result: {{counter}}</p>
     </div>
     <script src="app.js"></script>
   </body>

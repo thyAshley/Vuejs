@@ -1,18 +1,21 @@
 const app = Vue.createApp({
   data() {
     return {
-      name: "lorem",
-      age: 20,
+      counter: 0,
+      value: 1,
     };
   },
   methods: {
-    ageInFive() {
-      return this.age + 5;
+    addCounter() {
+      this.counter = this.counter + this.value;
     },
-    randomNumber() {
-      return Math.floor(Math.random() * 100);
+    minusCounter() {
+      this.counter = this.counter - this.value;
+    },
+    setName(e) {
+      this.value = +e.target.value;
     },
   },
 });
 
-app.mount("#app");
+app.mount("#events");
