@@ -8,14 +8,13 @@
   </head>
   <body>
     <div id="app">
-      <div>
-        <label for="goal">Goal</label>
-        <input type="text" id="goal" v-model="enteredValue" />
-        <button v-on:click="addGoal">Add Goal</button>
-      </div>
-      <ul>
-        <li v-for="goal in goals">{{goal}}</li>
-      </ul>
+      <header>
+        <h2>{{name}}</h2>
+        <h2>{{age}}</h2>
+        <h2>{{ageInFive()}}</h2>
+        <h2>{{randomNumber()}}</h2>
+        <input type="text" v-bind:value="name" />
+      </header>
     </div>
     <script src="app.js"></script>
   </body>

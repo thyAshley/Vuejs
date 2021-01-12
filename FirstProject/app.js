@@ -1,14 +1,18 @@
-Vue.createApp({
+const app = Vue.createApp({
   data() {
     return {
-      goals: [],
-      enteredValue: "",
+      name: "lorem",
+      age: 20,
     };
   },
   methods: {
-    addGoal() {
-      this.goals.push(this.enteredValue);
-      this.enteredValue = "";
+    ageInFive() {
+      return this.age + 5;
+    },
+    randomNumber() {
+      return Math.floor(Math.random() * 100);
     },
   },
-}).mount("#app");
+});
+
+app.mount("#app");
